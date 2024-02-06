@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F45C05F6-7443-4CA7-B847-A9C8BA1AD73B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DC7F69A9-881D-4BD3-A420-92F3899A4D1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RocketSeatLeilao.API", "src\RocketSeatLeilao.API\RocketSeatLeilao.API.csproj", "{35BE7426-14AD-47A7-BC27-4E787863888B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35BE7426-14AD-47A7-BC27-4E787863888B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BE7426-14AD-47A7-BC27-4E787863888B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BE7426-14AD-47A7-BC27-4E787863888B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BE7426-14AD-47A7-BC27-4E787863888B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35BE7426-14AD-47A7-BC27-4E787863888B} = {F45C05F6-7443-4CA7-B847-A9C8BA1AD73B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E19C0401-DCC4-4C52-AEE3-D690854AB6FA}
+	EndGlobalSection
+EndGlobal
