@@ -1,19 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using RocketSeatLeilao.API.Contracts;
 using RocketSeatLeilao.API.Entities;
-using RocketSeatLeilao.API.Repositories;
 
 namespace RocketSeatLeilao.API.UseCases.Leiloes.GetCurrent;
 
 public class GetCurrentLeilaoUseCase
 {
+    private readonly ILeilaoRepository _repository;
+public GetCurrentLeilaoUseCase(ILeilaoRepository repository)
+    {
+        _repository = repository;
+    }
+
     public Auction? Execute()
     {
-        var repository = new RocketSeatLeilaoDbContext();
-        var today = DateTime.UtcNow;
-
-        return repository
-            .Auctions
-            .Include(leilao => leilao.Itens)
-            .FirstOrDefault(leilao => leilao.Starts <= today && leilao.Ends >= today);
+        return _repository.GetCurrent();
+       
     }
 }

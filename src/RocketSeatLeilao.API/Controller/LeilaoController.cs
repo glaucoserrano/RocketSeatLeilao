@@ -4,16 +4,14 @@ using RocketSeatLeilao.API.UseCases.Leiloes.GetCurrent;
 
 namespace RocketSeatLeilao.API.Controller;
 
-[Route("[controller]")]
-[ApiController]
-public class LeilaoController : ControllerBase
+public class LeilaoController : RocketSeatLeilaoBaseController
 {
     [HttpGet]
     [ProducesResponseType(typeof(Auction),StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    public IActionResult GetCurrentLeilao()
+    public IActionResult GetCurrentLeilao([FromServices] GetCurrentLeilaoUseCase useCase)
     {
-        var useCase = new GetCurrentLeilaoUseCase();
+        
 
         var result = useCase.Execute();
 
@@ -24,4 +22,5 @@ public class LeilaoController : ControllerBase
 
         return Ok(result);
     }
+
 }
